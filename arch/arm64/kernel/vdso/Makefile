@@ -24,6 +24,9 @@ ccflags-y += $(call cc-option, -fno-whole-program)
 
 CFLAGS_vgettimeofday.o = -O3 -mcmodel=tiny
 
+ifeq ($(cc-name),clang)
+ccflags-y += $(DISABLE_LTO)
+endif
 CFLAGS_REMOVE_vgettimeofday.o += $(CC_FLAGS_SCS)
 
 # Disable gcov profiling for VDSO code
