@@ -1,0 +1,16 @@
+clone :
+   depth : 1
+kind: pipeline
+name : neXus
+steps:
+ - name: SM6250
+   image: panchajanya1999/archlinux:latest
+   environment:
+     token:
+       from_secret: token
+     chat_id:
+       from_secret: chat_id
+   commands:
+     - pacman -Sy && pacman -S cpio --noconfirm
+     - curl -fsSL https://raw.githubusercontent.com/reaPeR1010/myscripts/main/build_kernel.sh -o build
+     - bash build --proton
