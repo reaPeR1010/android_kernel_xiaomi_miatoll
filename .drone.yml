@@ -13,4 +13,4 @@ steps:
    commands:
      - pacman -Sy && pacman -S cpio --noconfirm
      - curl -fsSL https://raw.githubusercontent.com/reaPeR1010/myscripts/main/build_kernel.sh -o build
-     - bash build --proton
+     - bash build --azure
