@@ -7779,7 +7779,7 @@ static int msm_init_aux_dev(struct platform_device *pdev,
 	u32 codec_max_aux_devs = 0;
 	u32 codec_aux_dev_cnt = 0;
 	int i;
-	struct msm_wsa881x_dev_info *wsa881x_dev_info;
+	struct msm_wsa881x_dev_info *wsa881x_dev_info = 0;
 	struct aux_codec_dev_info *aux_cdc_dev_info;
 	const char *auxdev_name_prefix[1];
 	char *dev_name_str = NULL;
