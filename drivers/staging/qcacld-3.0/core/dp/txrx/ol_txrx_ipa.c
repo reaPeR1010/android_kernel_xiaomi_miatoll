@@ -503,8 +503,8 @@ QDF_STATUS ol_txrx_ipa_setup(struct cdp_soc_t *soc_hdl, uint8_t pdev_id,
 	struct ol_txrx_ipa_resources *ipa_res;
 	qdf_ipa_ep_cfg_t *tx_cfg;
 	qdf_ipa_ep_cfg_t *rx_cfg;
-	qdf_ipa_wdi_pipe_setup_info_t *tx;
-	qdf_ipa_wdi_pipe_setup_info_t *rx;
+	qdf_ipa_wdi_pipe_setup_info_t *tx = 0;
+	qdf_ipa_wdi_pipe_setup_info_t *rx = 0;
 	qdf_ipa_wdi_pipe_setup_info_smmu_t *tx_smmu;
 	qdf_ipa_wdi_pipe_setup_info_smmu_t *rx_smmu;
 	qdf_ipa_wdi_conn_in_params_t *pipe_in = NULL;
