@@ -4081,10 +4081,10 @@ static int lct_register_powermanger(struct smb_charger *chg)
 
 	chg->notifier.notifier_call = thermal_notifier_callback;
 	ret = msm_drm_register_client(&chg->notifier);
-    if (ret)
+    if (ret) {
         pr_err("[FB]Unable to register fb_notifier: %d", ret);
-
-	return 0;
+    }
+    return 0;
 }
 
 static int lct_unregister_powermanger(struct smb_charger *chg)
