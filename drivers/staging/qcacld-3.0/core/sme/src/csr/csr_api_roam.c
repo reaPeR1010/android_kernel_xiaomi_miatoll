@@ -1655,7 +1655,7 @@ QDF_STATUS csr_start(struct mac_context *mac)
 
 QDF_STATUS csr_stop(struct mac_context *mac)
 {
-	uint32_t sessionId;
+	uint32_t sessionId = 0;
 
 	if (mac->mlme_cfg->reg.enable_pending_chan_list_req)
 		ucfg_scan_unregister_event_handler(mac->pdev,
