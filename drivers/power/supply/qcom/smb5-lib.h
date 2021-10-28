@@ -222,8 +222,8 @@ enum print_reason {
 #define CHARGER_SOC_DECIMAL_MS		200
 
 /* lct thermal */
-static int LCT_THERM_CALL_LEVEL;
-static int LCT_THERM_LCDOFF_LEVEL;
+static int __maybe_unused LCT_THERM_CALL_LEVEL;
+static int __maybe_unused LCT_THERM_LCDOFF_LEVEL;
 
 enum hvdcp3_type {
 	HVDCP3_NONE = 0,
