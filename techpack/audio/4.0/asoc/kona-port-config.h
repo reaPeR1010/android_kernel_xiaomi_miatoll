@@ -66,7 +66,7 @@ static struct swr_mstr_port_map sm_port_map[] = {
 	{WSA_MACRO, SWR_UC0, wsa_frame_params_default},
 };
 
-static struct swr_mstr_port_map sm_port_map_v2[] = {
+static struct swr_mstr_port_map __maybe_unused sm_port_map_v2[] = {
 	{TX_MACRO, SWR_UC0, tx_frame_params_v2},
 	{RX_MACRO, SWR_UC0, rx_frame_params_default},
 	{RX_MACRO, SWR_UC1, rx_frame_params_dsd},
