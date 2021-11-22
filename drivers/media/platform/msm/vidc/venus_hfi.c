@@ -2219,9 +2219,6 @@ err_core_init:
 	__set_state(dev, VENUS_STATE_DEINIT);
 	__unload_fw(dev);
 err_load_fw:
-err_no_mem:
-	dprintk(VIDC_ERR, "Core init failed\n");
-	mutex_unlock(&dev->lock);
 	return rc;
 }
 
@@ -4725,8 +4722,6 @@ fail_enable_clks:
 	__disable_regulators(device);
 fail_enable_gdsc:
 	__unvote_buses(device);
-fail_vote_buses:
-	device->power_enabled = false;
 	return rc;
 }
 
